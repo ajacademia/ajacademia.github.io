@@ -1,55 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>AJ Academia</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script>
-    // Script to open and close sidebar
-    function w3_open() {
-        document.getElementById("mySidebar").style.display = "block";
-        document.getElementById("myOverlay").style.display = "block";
-    }
 
-    function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
-        document.getElementById("myOverlay").style.display = "none";
-    }
+<head>
+    <title>AJ Academia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
 
-    // Modal Image Gallery
-    function onClick(element) {
-        document.getElementById("img01").src = element.src;
-        document.getElementById("modal01").style.display = "block";
-        var captionText = document.getElementById("caption");
-        captionText.innerHTML = element.alt;
-    }
-</script>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-<style>
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-        font-family: "Poppins", sans-serif
-    }
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
 
-    body {
-        font-size: 16px;
-    }
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Poppins", sans-serif
+        }
 
-    .w3-half img {
-        margin-bottom: -6px;
-        margin-top: 16px;
-        opacity: 0.8;
-        cursor: pointer
-    }
+        body {
+            font-size: 16px;
+        }
 
-    .w3-half img:hover {
-        opacity: 1
-    }
-</style>
+        .w3-half img {
+            margin-bottom: -6px;
+            margin-top: 16px;
+            opacity: 0.8;
+            cursor: pointer
+        }
+
+        .w3-half img:hover {
+            opacity: 1
+        }
+    </style>
+    <meta name="theme-color" content="#673ab7" />
+</head>
 
 <body>
 
@@ -63,7 +67,7 @@
         </div>
         <div class="w3-bar-block">
             <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
-            <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About Us</a>
+            <a href="#aboutus" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About Us</a>
             <a href="#classes" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Classes</a>
             <a href="#faculty" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Faculty</a>
             <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Packages</a>
@@ -85,14 +89,25 @@
     <div class="w3-main" style="margin-left:340px;margin-right:40px">
 
         <!-- Header -->
-        <div class="w3-container" style="margin-top:80px" id="showcase">
+        <div class="w3-container" style="margin-top:80px" id="aboutus">
             <h1 class="w3-jumbo"><b>Educational Consulting</b></h1>
             <h1 class="w3-xxxlarge w3-text-deep-purple"><b>About Us</b></h1>
             <hr style="width:50px;border:5px solid #673ab7" class="w3-round">
+            <p>AJ Academia aims to provide quality online tutoring services and assignment assistance by
+                prioritizing our clients' needs and tailoring our services to meet them. We offer a free consultation
+                session to
+                discuss the requirements of our clients.
+            </p>
+            <p>We recently added a new writing center to help students
+                with their papers. We offer proof-reading and editing services to ensure your paper is accurate and
+                scholarly.
+                Our tutoring services are flexible and carefully planned to provide ease of learning, in a comfortable
+                environment.
+            </p>
         </div>
 
         <!-- Photo grid (modal) -->
-        <div class="w3-row-padding">
+        <!--<div class="w3-row-padding">
             <div class="w3-half">
                 <img src="/w3images/kitchenconcrete.jpg" style="width:100%" onclick="onClick(this)"
                     alt="Concrete meets bricks">
@@ -109,7 +124,7 @@
                 <img src="/w3images/livingroom2.jpg" style="width:100%" onclick="onClick(this)"
                     alt="Scandinavian design">
             </div>
-        </div>
+        </div>-->
 
         <!-- Modal for full size images on click-->
         <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
