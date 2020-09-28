@@ -748,6 +748,10 @@ a {
   .w3-sidebar.w3-collapse {
     display: block !important;
   }
+  .w3-jumbo-responsive {
+    font-size: 64px !important;
+    display: inline !important;
+  }
 }
 @media (max-width: 992px) and (min-width: 601px) {
   .w3-hide-medium {
@@ -764,6 +768,10 @@ a {
   }
   .w3-auto {
     max-width: 100%;
+  }
+  .w3-jumbo-responsive {
+    font-size: 48px !important;
+    display: block !important;
   }
 }
 .w3-top,
